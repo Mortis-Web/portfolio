@@ -1,0 +1,100 @@
+.section {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 0;
+}
+.section .container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  padding-top: 4rem;
+}
+.btn {
+  margin: auto;
+  margin-top: 2.5rem;
+}
+
+.btnPrime {
+  margin-left: 1.5rem;
+}
+
+.name{
+  font-size: 3rem;
+    background-size: 200% 200% !important;
+      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80);
+      color: transparent;
+      background-clip: text;
+  animation: nameAnim 3s linear infinite;
+
+}
+.headerBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 6rem;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 6rem;
+  &::after {
+    content: "";
+    width: 2px;
+    height: 2rem;
+    background-color: var(--colorPrime);
+  }
+}
+
+.me {
+  background: linear-gradient(var(--colorPrime), transparent);
+  width: 22rem;
+  height: 22rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+
+@keyframes nameAnim {
+  0%{
+    background-position: 0% 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  10%{
+    background-position: 0% 50%
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .section {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    height: 100vh;
+  }
+  .headerIcons {
+    display: none;
+  }
+  #dashBtn{
+    display:none !important;
+  }
+}

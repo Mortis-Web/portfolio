@@ -1,0 +1,101 @@
+
+.aboutME{
+    width: 22rem;
+    background: linear-gradient(45deg,transparent,var(--colorPrime),transparent);
+    border-radius: 1.5rem;
+    aspect-ratio: 1/1;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+.aboutME img{
+    border-radius: 1.5rem;
+    rotate: 10deg;
+    overflow: hidden;
+    filter: brightness(80%);
+    transition: var(--transition);
+    &:hover{
+        rotate: 0deg;
+        filter: brightness(120%);
+    }
+}
+
+#about .container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+    align-items:center ;
+}
+
+.cards{
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.aboutCard{
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    max-width: 180px;
+    transition: var(--transition);
+    background-color: var(--bgColorVar);
+    &:hover{
+        background-color: transparent;
+        border-color: var(--colorPrimeVar);
+    }
+}
+
+ #about p{
+text-align: start;
+}
+.aboutCard i{
+    color: var(--colorPrime);
+}
+#about .btnPrime{
+    margin-left: 0;
+}
+
+@media (max-width:1024px){
+    #about .container{
+        grid-template-columns: 1fr;
+        gap: 0;
+
+    }
+    .aboutCard{
+        margin: auto;
+    }
+    .aboutME{
+        width: 65%;
+        margin: 2rem auto 4rem;
+    }
+    p{
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+@media (max-width:600px){
+    .aboutME{
+        width: 65%;
+        margin: 0rem auto 3rem;
+    }
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 0;
+    }
+
+
+    p{
+        text-align: center !important;
+        margin: 1.5rem 0;
+    }
+    #about .btn{
+        text-align: center;
+        margin: auto;
+
+    }
+
+}

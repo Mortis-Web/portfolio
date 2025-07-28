@@ -1,0 +1,59 @@
+
+#skills .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.frontend {
+  background-color: var(--bgColorVar);
+  border: 1px solid transparent;
+  padding: 5rem 1rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+  &:hover {
+    background-color: transparent;
+    border-color: var(--colorPrimeVar);
+  }
+}
+.frontend h3 {
+  text-align: center;
+  color: var(--colorPrime);
+  margin-bottom: 2rem;
+}
+.frontendSkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.skillDetail {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+}
+.icon {
+  margin-top: 6px;
+  color: var(--colorPrime);
+}
+
+@media screen and (max-width: 1024px) {
+  #skills .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .frontend {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #skills .container {
+    gap: 1rem;
+  }
+  .frontend {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+}

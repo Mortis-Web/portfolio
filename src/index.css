@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base{
+
+  * {
+    @apply m-0 p-0 box-border border-0 outline-0 list-none
+  }
+    ::-webkit-scrollbar {
+    @apply w-3.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply my-6 rounded-full bg-white/70;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full border-1 border-white/70 bg-(--bgColorVar);
+  }
+
+}
+
+@font-face {
+    font-family: jura;
+    src: url('../src/assets/Jura-VariableFont_wght.ttf');
+}
+
+:root {
+  --bgColor: #1f1f38;
+  --bgColorVar: #2c2c6c;
+  --colorPrime: #4db5ff;
+  --colorPrimeVar: rgba(77, 181, 255, 0.4);
+  --white: White;
+  --light: rgba(255, 255, 255, 0.6);
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --transition: 400ms ease all;
+}
+
+body.dark{
+    --bgColor: #1f1f38;
+    --bgColorVar: #2c2c6c;
+    --colorPrime: #4db5ff;
+    --colorPrimeVar: rgba(77, 181, 255, 0.4);
+    --white: White;
+    --light: rgba(255, 255, 255, 0.6);
+  }
+
+  body.light{
+    --bgColor: #1f1f38;
+    --bgColorVar: #2c2c6c;
+    --colorPrime: #4db5ff;
+    --colorPrimeVar: rgba(77, 181, 255, 0.4);
+    --white: White;
+    --light: rgba(255, 255, 255, 0.6);
+   }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--bgColor);
+  color: var(--white);
+  line-height: 1.7;
+  text-transform: capitalize;
+  font-family: jura;
+}
+
+/* GENERAL STYLES */
+
+.container {
+    width: var(--container-width-lg);
+  margin: auto;
+}
+
+input{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+section {
+  padding-top: 8rem;
+  /* height: 100vh; */
+}
+section h2,
+section h5 {
+  text-align: center;
+  color: var(--light);
+}
+
+
+h2,h5,h1{
+    font-weight: bold;
+}
+
+section h2 {
+  color: var(--colorPrime);
+  margin-bottom: 3rem;
+}
+.textLight {
+  color: var(--light);
+}
+
+a {
+  transition: var(--transition);
+  color: var(--colorPrime);
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--colorPrime);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid var(--colorPrime);
+  transition: var(--transition);
+  &:hover {
+    background-color: var(--white);
+    color: var(--bgColor);
+    border-color: transparent;
+  }
+}
+
+.btnPrime {
+  background-color: var(--colorPrime);
+  color: var(--bgColor);
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .container {
+      width: var(--container-width-md);
+    }
+  }
+
+  @media (min-width: 600px) {
+    .container {
+      width: var(--container-width-sm);
+    }
+  }
+
